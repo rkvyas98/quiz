@@ -452,7 +452,6 @@ document.querySelector(".header").appendChild(hr);
 display()
 }
 
-
 // Displaying Questions
 
 function display(){
@@ -475,6 +474,7 @@ for(var i = 0; i< data.length; i++){
             var c = document.createElement("c");
             c.innerHTML =  data[i][j] + '<br>';
             c.setAttribute("class", "qna")
+            c.setAttribute("id", "q"+i+j)
             document.querySelector(".quizForm").appendChild(c)
             console.log(b);
             
@@ -573,12 +573,22 @@ if(q10Value == answers[9]){  score ++;}
 function showAns(){
   ansText = "Answers are: \n";
   if(ansCount >= 10){
-    for(var i = 0 ; i < answers.length ; i++){
-      ansText += (i+1) +".  "+ answers[i] + ", \n";
+  for(var k = 0 ; k < answers.length ; k++){
+      console.log(answers[k]);      
+      for(var i = 0; i< data.length; i++){
+        if(k == i){  
+          for(var j=1; j < 5 ; j++){
+            if( answers[k] == j){
+              console.log("q"+i+j);
+              document.querySelector("c#q"+i+j+".qna").style.color = "rgb(62, 243, 26)";
+              document.querySelector("c#q"+i+j+".qna").style.fontWeight = "900";
+              document.querySelector("c#q"+i+j+".qna").style.fontFamily = "'Times New Roman', Times, serif" ; 
+              document.querySelector("c#q"+i+j+".qna").style.letterSpacing = "2px";
+            } 
+          }
+        } 
+      }
     }
-    var AnsArea= document.createElement("c");
-    AnsArea.innerText = ansText;
-    document.querySelector(".container").appendChild(AnsArea);
   } else{
     alert("Please Attempt all questions and submit it first.");
   }
