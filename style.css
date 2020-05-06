@@ -73,7 +73,19 @@ hr{
   color: black;
 }
 
-/* index special effect */
+@media (max-width: 500px) {
+  .container-home{
+    width: 80%;
+  }
+  .btn{
+    padding: 6px 10px;
+  }
+
+}
+
+
+
+/* index.html special effect */
 .shadow{
 /* display: inline; */
 position: relative;
