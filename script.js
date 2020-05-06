@@ -565,6 +565,8 @@ if(q10Value == answers[9]){  score ++;}
   alert("Your Score is " + score + " out of 10. \n " + compliment);
   } else{
     alert(`Please answer all questions to check result. \nYou answered ${ansCount} question.`);
+    score = 0; 
+    ansCount = 0;
   }
 }
 // Showing Answers
