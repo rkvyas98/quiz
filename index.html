@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz Timee</title>
+    <link rel="icon" href="quiz.png" type="icon">
+    <!-- Bootstrap and jQuery links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="container-home shadow"> 
+        <h1>Quizzes on Programming Languages</h1>
+        <p>Want to test your knowledge of a specific language or topic?
+         Give this coding quizzes a try!</p> <br>
+        <h2>Select the Language you want to test.</h2>
+        <a type="button" class="btn btn-outline-light" onclick="cp()" >C Programming</a>
+        <a type="button" class="btn btn-outline-light" onclick="cpp()" >C++</a>
+        <a type="button" class="btn btn-outline-light" onclick="java()" >Java</a> <br> 
+        <a type="button" class="btn btn-outline-light" onclick="python()">Python</a>
+        <a type="button" class="btn btn-outline-light" onclick="javaScript()" >JavaScript</a> <br> <br>
+    </div> 
+    <div class="container">
+        <div class="header"></div>
+        <form class="quizForm" name="quizForm" onsubmit="submitAnswers()">
+        </form>  
+    </div>
+    <div class="bottom-container">
+        <a target="_blank" class="footer-link" href="https://www.linkedin.com/in/rakshit-vyas-253a47174/">LinkedIn</a>
+        <a target="_blank" class="footer-link" href="https://twitter.com/rkvyas98">Twitter</a>
+        <a target="_blank" class="footer-link" href="http://rkvyas98.pythonanywhere.com/">Website</a>
+        <p class="copyright">© Rakshit Vyas.2020</p>
+    </div>
+</body>
+</html>
